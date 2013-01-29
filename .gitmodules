@@ -1,0 +1,9 @@
+[submodule "submodules/impress.js"]
+	path = submodules/impress.js
+	url = git://github.com/bartaz/impress.js.git
+[submodule "submodules/highlight.js"]
+	path = submodules/highlight.js
+	url = git://github.com/isagalaev/highlight.js.git
+[submodule "submodules/normalize.css"]
+	path = submodules/normalize.css
+	url = git://github.com/necolas/normalize.css.git

@@ -1,0 +1,467 @@
+extends _layout
+
+block head-title
+  title Frontend Build Tools and Brunch
+
+block head-meta
+  meta(name='author', content='Yu Inao')
+  meta(name='rights-standard', content='pd')
+  meta(name='keywords', content='Brunch, Grunt, Yeoman, Cakefile, JavaScript, CSS, HTML,')
+  meta(name='description', content='')
+
+block head-style
+  link(rel='stylesheet', href='./css/app.css')
+
+block body-content
+  div#impress
+    section#bored.step(data-x='0', data-y='0', data-z='0', data-rotate='0', data-scale='1')
+      h1 Frontend Build Tools and Brunch
+
+    section.step(data-x='-100', data-y='0', data-z='1000', data-rotate='0', data-scale='1')
+      h1 Agenda
+
+    section.step(data-x='-200', data-y='0', data-z='2000', data-rotate='0', data-scale='1')
+      ol
+        li Why I am interested in build tools
+        li What exactly the build tools do
+        li What Brunch does
+        li Composable vs. contextual
+        li Conclusion
+
+    section.step(data-x='-300', data-y='0', data-z='3000', data-rotate='0', data-scale='1')
+      h1 Why I am interested in build tools
+
+    section.step(data-x='-400', data-y='0', data-z='4000', data-rotate='0', data-scale='1')
+      p.message Ugliy
+      div#loading-tons-of-scripts
+
+    section.step(data-x='-500', data-y='0', data-z='5000', data-rotate='0', data-scale='1')
+      p.message Cool
+      div#loading-minimal-scripts
+
+    section.step(data-x='-600', data-y='0', data-z='6000', data-rotate='0', data-scale='1')
+      p.message Awesome
+      div#minified-sources
+
+    section.step(data-x='-700', data-y='0', data-z='7000', data-rotate='0', data-scale='1')
+     h1 What exactly the build tools are
+
+    section.step(data-x='-800', data-y='0', data-z='8000', data-rotate='0', data-scale='1')
+      h2 Tasks of build tools
+
+      table
+        tbody
+          tr
+            td
+            th Test
+            th Conversion
+            th Automation
+            th Other
+          tr
+            th(rowspan='3') Source
+            td Lint
+            td Build
+            td Substitution
+            td AMD
+          tr
+            td Test
+            td Minify
+            td
+            td CommonJS
+          tr
+            td
+            td Concat
+            td
+            td Generating source map
+          tr
+            th Image
+            td
+            td Image optimization
+            td Generating CSS sprites
+            td
+           tr
+            th(rowspan='5') Overall
+            td
+            td
+            td Watch
+            td
+          tr
+            td
+            td
+            td Auto-reload
+            td
+          tr
+            td
+            td
+            td Boilerplate
+            td
+          tr
+            td
+            td
+            td Scaffolding
+            td
+          tr
+            td
+            td
+            td Package manager
+            td
+          tr
+            th(rowspan='2') Other
+            td
+            td
+            td
+            td Server
+          tr
+            td
+            td
+            td
+            td Notifier
+
+    section.step.gruntjs(data-x='-800', data-y='0', data-z='8000', data-rotate='0', data-scale='1')
+      h2  Grunt.js does;
+
+      table
+        tbody
+          tr
+            td
+            th Test
+            th Conversion
+            th Automation
+            th Other
+          tr
+            th(rowspan='3') Source
+            td.strong Lint
+            td.strong Build
+            td.emphasis Substitution
+            td.strong AMD
+          tr
+            td.strong Test
+            td.strong Minify
+            td
+            td CommonJS
+          tr
+            td
+            td.strong Concat
+            td
+            td Generating source map
+          tr
+            th Image
+            td
+            td.emphasis Image optimization
+            td.emphasis Generating CSS sprites
+            td
+           tr
+            th(rowspan='5') Overall
+            td
+            td
+            td.strong Watch
+            td
+          tr
+            td
+            td
+            td.emphasis Auto-reload
+            td
+          tr
+            td
+            td
+            td Boilerplate
+            td
+          tr
+            td
+            td
+            td Scaffolding
+            td
+          tr
+            td
+            td
+            td Package manager
+            td
+          tr
+            th(rowspan='2') Other
+            td
+            td
+            td
+            td.strong Server
+          tr
+            td
+            td
+            td
+            td.strong Notifier
+
+    section.step.yeoman(data-x='-800', data-y='0', data-z='8000', data-rotate='0', data-scale='1')
+      h2  Yeoman does;
+
+      table
+        tbody
+          tr
+            td
+            th Test
+            th Conversion
+            th Automation
+            th Other
+          tr
+            th(rowspan='3') Source
+            td.strong Lint
+            td.strong Build
+            td.emphasis Substitution
+            td.strong AMD
+          tr
+            td.strong Test
+            td.strong Minify
+            td
+            td CommonJS
+          tr
+            td
+            td.strong Concat
+            td
+            td Generating source map
+          tr
+            th Image
+            td
+            td.strong Image optimization
+            td.emphasis Generating CSS sprites
+            td
+           tr
+            th(rowspan='5') Overall
+            td
+            td
+            td.strong Watch
+            td
+          tr
+            td
+            td
+            td.strong Auto-reload
+            td
+          tr
+            td
+            td
+            td.strong Boilerplate
+            td
+          tr
+            td
+            td
+            td.strong Scaffolding
+            td
+          tr
+            td
+            td
+            td.strong Package manager
+            td
+          tr
+            th(rowspan='2') Other
+            td
+            td
+            td
+            td.strong Server
+          tr
+            td
+            td
+            td
+            td.strong Notifier
+
+    section.step.brunch(data-x='-800', data-y='0', data-z='8000', data-rotate='0', data-scale='1')
+      h2  Brunch does;
+
+      table
+        tbody
+          tr
+            td
+            th Test
+            th Conversion
+            th Automation
+            th Other
+          tr
+            th(rowspan='3') Source
+            td.strong Lint
+            td.strong Build
+            td Substitution
+            td.strong AMD
+          tr
+            td.strong Test
+            td.strong Minify
+            td
+            td.strong CommonJS
+          tr
+            td
+            td.strong Concat
+            td
+            td Generating source map
+          tr
+            th Image
+            td
+            td.emphasis Image optimization
+            td.emphasis Generating CSS sprites
+            td
+           tr
+            th(rowspan='5') Overall
+            td
+            td
+            td.strong Watch
+            td
+          tr
+            td
+            td
+            td.strong Auto-reload
+            td
+          tr
+            td
+            td
+            td.strong Boilerplate
+            td
+          tr
+            td
+            td
+            td.strong Scaffolding
+            td
+          tr
+            td
+            td
+            td Package manager
+            td
+          tr
+            th(rowspan='2') Other
+            td
+            td
+            td
+            td.strong Server
+          tr
+            td
+            td
+            td
+            td.strong Notifier
+
+    section.step(data-x='-900', data-y='0', data-z='9000', data-rotate='0', data-scale='1')
+      h1 What Brunch does
+
+    section.step(data-x='-1000', data-y='0', data-z='10000', data-rotate='0', data-scale='1')
+      h2 Yeoman and Brunch cover same field
+
+      ul
+        li They are more like framework than Grunt.js
+        li Main differences between Yeoman/Brunch and Grunt.js:
+          ul
+            li Script modularization (AMD/CommonJS)
+            li Boilerplate
+            li Scaffolding
+
+    section.step(data-x='-1100', data-y='0', data-z='11000', data-rotate='0', data-scale='1')
+      h2 Difference between Yeoman and Brunch
+
+      table
+        tbody
+          tr
+            td
+            th AMD
+            th CommonJS
+            th Boilerplate
+            th Scaffolding
+            th Package manager
+          tr
+            th Yeoman
+            td ✓
+            td
+            td ✓
+            td ✓
+            td ✓
+          tr
+            th Brunch
+            td ✓
+            td ✓
+            td ✓
+            td ✓
+            td
+
+      ul
+        li
+          strong Yeoman
+          |  is built on Grunt.js, Require.js, and Twitter Bower
+        li
+          strong Brunch
+          |  is built with own built-in functions
+
+    section.step(data-x='-1200', data-y='0', data-z='12000', data-rotate='0', data-scale='1')
+      h2 Why I choose Brunch
+
+      ul
+        li Supports both of AMD and CommonJS modularization
+        li Super simple Boilerplate compared to Yeoman
+        li Super simple Scaffolding compared to Yeoman
+        li Twitter Bower is like a reinventing wheel of NPM
+
+    section.step.yeoman(data-x='-1300', data-y='0', data-z='13000', data-rotate='0', data-scale='1')
+      p.message 難しかった...
+
+    section.step(data-x='-1400', data-y='0', data-z='14000', data-rotate='0', data-scale='1')
+      h2 CommonJS modularization in Brunch
+
+      p app.coffee:
+      pre
+        | app = _.extend {}, Backbone.Events
+        | module.exports = app
+
+      p init.coffee
+      pre
+        | app = require './app'
+        | app.on 'initialize', initialize
+
+      p index.html
+      pre
+        | <script src="app.js"></script>
+        | <script>require('init');</script>
+
+    section.step(data-x='-1500', data-y='0', data-z='15000', data-rotate='0', data-scale='1')
+      h2 Super simple Boilerplate
+
+      p brunch new proj_name --skeleton git://github.com/japboy/brunch-with-impress.js.git
+
+    section.step(data-x='-1600', data-y='0', data-z='16000', data-rotate='0', data-scale='1')
+      h2 Super simple Scaffolding
+
+      p However, no documentation. Read the source.
+
+    section.step.nicho(data-x='-1700', data-y='0', data-z='17000', data-rotate='0', data-scale='1')
+
+    section.step(data-x='-1800', data-y='0', data-z='18000', data-rotate='0', data-scale='1')
+      h1 Composable vs. contextual
+
+    section.step.nealford(data-x='-1900', data-y='0', data-z='19000', data-rotate='0', data-scale='1')
+      h2 nealford.com • Why Everyone (Eventually) Hates (or Leaves) Maven
+      p Javaのプロジェクトでよく利用されるMavanというビルドツールはプロジェクトの開始時には確かに強力な土台を簡単に作ってくれるツールではあるが、開発が進むにつれて不便に感じる様になってくるのはなぜか。
+      p 沢山の事が初めからできるということは便利だが、カスタマイズには向かない。Mavenの話ではあるが、Grunt.jsにも同じ事が言えるのかも。
+      ul
+        li
+          a(href='https://gist.github.com/4630423') CSS Radar - 2013/01/25
+
+    section.step(data-x='-2000', data-y='0', data-z='20000', data-rotate='0', data-scale='1')
+      p.message Contextual
+      div.pain-3.gruntjs
+      div.pain-3.yeoman
+      div.pain-3.brunch
+
+    section.step(data-x='-2100', data-y='0', data-z='21000', data-rotate='0', data-scale='1')
+      p.message Composable
+      div.pain-2.cakefile
+      div.pain-2.jakefile
+
+    section.step(data-x='-2200', data-y='0', data-z='22000', data-rotate='0', data-scale='1')
+      p.message
+        | Contextual
+        br
+        | GUI
+      div.pain-2.livereload
+      div.pain-2.codekit
+
+    section.step(data-x='-2300', data-y='0', data-z='23000', data-rotate='0', data-scale='1')
+      p.message
+        | Contextual?
+      div.pain-1.assetgraph
+
+    section.step(data-x='-2400', data-y='0', data-z='24000', data-rotate='0', data-scale='1')
+      h1 Conclusion
+
+    section.step(data-x='-2500', data-y='0', data-z='25000', data-rotate='0', data-scale='1')
+      p.message 好きなの使え
+
+  script(src='./js/app.js', charset='UTF-8')
+  script
+    require('script');

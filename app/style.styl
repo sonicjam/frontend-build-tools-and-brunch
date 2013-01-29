@@ -1,0 +1,214 @@
+/**
+ * Brunch with impress.js
+ * ======================
+ *
+ * Copyright 2013 [Yu Inao][0] and distributed under [Public Domain][1]
+ *
+ * [0]: http://github.com/japboy
+ * [1]: http://creativecommons.org/licenses/publicdomain/
+ */
+
+
+@import 'nib'
+@import './_mixins'
+
+
+bgColor = rgb(255,255,255)
+bgColorA = rgba(255,255,255,0.8)
+baseColor = rgb(255,153,0)
+baseColorA = rgba(255,153,0,0.5)
+subColorRed = #f00
+subColorBlue = #06f
+subColorOcean = rgb(0,179,255)
+subColorOceanA = rgba(0,179,255,0.8)
+subColorWhite = rgb(238,255,170)
+subColorWhiteA = rgba(238,255,170,0.8)
+
+body
+  -webkit-font-smoothing: subpixel-antialiased
+
+#impress .step
+  box-sizing: border-box
+  color: subColorBlue
+  font-size: 180%
+  opacity: 0
+  padding: 30px
+  transition: opacity 0.3s
+
+  &.active
+    opacity: 1
+    transition: opacity 0.3s
+
+  &.gruntjs
+    background-image: url('../img/gruntjs.png')
+    background-size: cover
+
+  &.yeoman
+    background-image: url('../img/yeoman.png')
+    background-size: cover
+
+  &.brunch
+    background-image: url('../img/brunch.png')
+    background-size: cover
+
+  &.nicho
+    background-image: url('../img/nicho.png')
+    background-size: cover
+
+  &.nealford
+    background-image: url('../img/nealford.png')
+    background-size: cover
+
+  h1
+    box-sizing: border-box
+    font-size: 64px
+    font-weight: bolder
+    height: 64px + 24px
+    left: 0
+    line-height: 100%
+    margin-bottom: 0
+    margin-top: -20px
+    padding: 12px 30px
+    position: absolute
+    top: 50%
+    width: 100%
+
+  h2
+    box-sizing: border-box
+    color: bgColor
+    font-size: 32px
+    text-stroke: 2px subColorBlue
+
+  pre
+    background-color: subColorWhite
+
+  table
+    border-collapse: collapse
+    font-size: 60%
+    margin: 0 auto
+
+    th,
+    td
+      background-color: bgColorA
+      border-color: subColorOceanA
+      border-style: solid
+      padding: 10px
+
+      &.emphasis
+        background-color: subColorWhiteA
+
+      &.strong
+        background-color: subColorWhiteA
+        color: subColorRed
+        font-weight: bolder
+
+  .message
+    bottom: 0
+    color: bgColor
+    font-size: 64px * 2
+    font-weight: bolder
+    left: 0
+    position: absolute
+    text-align: center
+    text-transform: uppercase
+    text-stroke: 3px subColorBlue
+    width: 100%
+    z-index: 1
+
+  .pain-3
+    background-size: cover
+    height: 100%
+    position: absolute
+    width: 33.3%
+    z-index: 0
+
+    &.gruntjs
+      background-image: url('../img/gruntjs.png')
+      background-position: 10% 0
+      left: 0
+
+    &.yeoman
+      background-image: url('../img/yeoman.png')
+      background-position: 0
+      left: 50%
+      margin-left: -(33.3/2)%
+
+    &.brunch
+      background-image: url('../img/brunch.png')
+      background-position: 50% 0
+      right: 0
+
+  .pain-2
+    background-size: cover
+    height: 100%
+    position: absolute
+    width: 50%
+    z-index: 0
+
+    &.cakefile
+      background-image: url('../img/cakefile.png')
+      background-position: 0
+      left: 0
+
+    &.jakefile
+      background-image: url('../img/jakefile.png')
+      background-position: 0
+      right: 0
+
+    &.livereload
+      background-image: url('../img/livereload.png')
+      background-position: 100% 0
+      left: 0
+
+    &.codekit
+      background-image: url('../img/codekit.png')
+      background-position: 50% 0
+      right: 0
+
+  .pain-1
+    background-size: cover
+    background-position: 50% 0
+    height: 100%
+    position: absolute
+    width: 100%
+    z-index: 0
+
+    &.assetgraph
+      background-image: url('../img/assetgraph.png')
+      left: 0
+
+  #loading-tons-of-scripts
+    background-size: cover
+    background-image: url('../img/loading-tons-of-scripts.png')
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+
+  #loading-minimal-scripts
+    background-size: cover
+    background-image: url('../img/loading-minimal-scripts.png')
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 0
+
+  #minified-sources
+    background-size: cover
+    background-image: url('../img/minified-sources.png')
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+
