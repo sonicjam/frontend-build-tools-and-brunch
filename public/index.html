@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Frontend Build Tools and Brunch</title>
+    <link rel="stylesheet" href="./css/app.css">
+  </head>
+  <body>
+    <div id="impress">
+      <section id="bored" data-x="0" data-y="0" data-z="0" data-rotate="0" data-scale="1" class="step">
+        <h1>Frontend Build Tools and Brunch</h1>
+      </section>
+      <section data-x="-100" data-y="0" data-z="1000" data-rotate="0" data-scale="1" class="step">
+        <h1>Agenda</h1>
+      </section>
+      <section data-x="-200" data-y="0" data-z="2000" data-rotate="0" data-scale="1" class="step">
+        <ol>
+          <li>Why I am interested in build tools</li>
+          <li>What exactly the build tools do</li>
+          <li>What Brunch does</li>
+          <li>Composable vs. contextual</li>
+          <li>Conclusion</li>
+        </ol>
+      </section>
+      <section data-x="-300" data-y="0" data-z="3000" data-rotate="0" data-scale="1" class="step">
+        <h1>Why I am interested in build tools</h1>
+      </section>
+      <section data-x="-400" data-y="0" data-z="4000" data-rotate="0" data-scale="1" class="step">
+        <p class="message">Ugliy</p>
+        <div id="loading-tons-of-scripts"></div>
+      </section>
+      <section data-x="-500" data-y="0" data-z="5000" data-rotate="0" data-scale="1" class="step">
+        <p class="message">Cool</p>
+        <div id="loading-minimal-scripts"></div>
+      </section>
+      <section data-x="-600" data-y="0" data-z="6000" data-rotate="0" data-scale="1" class="step">
+        <p class="message">Awesome</p>
+        <div id="minified-sources"></div>
+      </section>
+      <section data-x="-700" data-y="0" data-z="7000" data-rotate="0" data-scale="1" class="step">
+        <h1>What exactly the build tools are</h1>
+      </section>
+      <section data-x="-800" data-y="0" data-z="8000" data-rotate="0" data-scale="1" class="step">
+        <h2>Tasks of build tools</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <th>Test</th>
+              <th>Conversion</th>
+              <th>Automation</th>
+              <th>Other</th>
+            </tr>
+            <tr>
+              <th rowspan="3">Source</th>
+              <td>Lint</td>
+              <td>Build</td>
+              <td>Substitution</td>
+              <td>AMD</td>
+            </tr>
+            <tr>
+              <td>Test</td>
+              <td>Minify</td>
+              <td></td>
+              <td>CommonJS</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Concat</td>
+              <td></td>
+              <td>Generating source map</td>
+            </tr>
+            <tr>
+              <th>Image</th>
+              <td></td>
+              <td>Image optimization</td>
+              <td>Generating CSS sprites</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th rowspan="5">Overall</th>
+              <td></td>
+              <td></td>
+              <td>Watch</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Auto-reload</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Boilerplate</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Scaffolding</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Package manager</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th rowspan="2">Other</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Server</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Notifier</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section data-x="-800" data-y="0" data-z="8000" data-rotate="0" data-scale="1" class="step gruntjs">
+        <h2> Grunt.js does;</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <th>Test</th>
+              <th>Conversion</th>
+              <th>Automation</th>
+              <th>Other</th>
+            </tr>
+            <tr>
+              <th rowspan="3">Source</th>
+              <td class="strong">Lint</td>
+              <td class="strong">Build</td>
+              <td class="emphasis">Substitution</td>
+              <td class="strong">AMD</td>
+            </tr>
+            <tr>
+              <td class="strong">Test</td>
+              <td class="strong">Minify</td>
+              <td></td>
+              <td>CommonJS</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="strong">Concat</td>
+              <td></td>
+              <td>Generating source map</td>
+            </tr>
+            <tr>
+              <th>Image</th>
+              <td></td>
+              <td class="emphasis">Image optimization</td>
+              <td class="emphasis">Generating CSS sprites</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th rowspan="5">Overall</th>
+              <td></td>
+              <td></td>
+              <td class="strong">Watch</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="emphasis">Auto-reload</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Boilerplate</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Scaffolding</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Package manager</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th rowspan="2">Other</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="strong">Server</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="strong">Notifier</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section data-x="-800" data-y="0" data-z="8000" data-rotate="0" data-scale="1" class="step yeoman">
+        <h2> Yeoman does;</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <th>Test</th>
+              <th>Conversion</th>
+              <th>Automation</th>
+              <th>Other</th>
+            </tr>
+            <tr>
+              <th rowspan="3">Source</th>
+              <td class="strong">Lint</td>
+              <td class="strong">Build</td>
+              <td class="emphasis">Substitution</td>
+              <td class="strong">AMD</td>
+            </tr>
+            <tr>
+              <td class="strong">Test</td>
+              <td class="strong">Minify</td>
+              <td></td>
+              <td>CommonJS</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="strong">Concat</td>
+              <td></td>
+              <td>Generating source map</td>
+            </tr>
+            <tr>
+              <th>Image</th>
+              <td></td>
+              <td class="strong">Image optimization</td>
+              <td class="emphasis">Generating CSS sprites</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th rowspan="5">Overall</th>
+              <td></td>
+              <td></td>
+              <td class="strong">Watch</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="strong">Auto-reload</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="strong">Boilerplate</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="strong">Scaffolding</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="strong">Package manager</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th rowspan="2">Other</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="strong">Server</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="strong">Notifier</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section data-x="-800" data-y="0" data-z="8000" data-rotate="0" data-scale="1" class="step brunch">
+        <h2> Brunch does;</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <th>Test</th>
+              <th>Conversion</th>
+              <th>Automation</th>
+              <th>Other</th>
+            </tr>
+            <tr>
+              <th rowspan="3">Source</th>
+              <td class="strong">Lint</td>
+              <td class="strong">Build</td>
+              <td>Substitution</td>
+              <td class="strong">AMD</td>
+            </tr>
+            <tr>
+              <td class="strong">Test</td>
+              <td class="strong">Minify</td>
+              <td></td>
+              <td class="strong">CommonJS</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="strong">Concat</td>
+              <td></td>
+              <td>Generating source map</td>
+            </tr>
+            <tr>
+              <th>Image</th>
+              <td></td>
+              <td class="emphasis">Image optimization</td>
+              <td class="emphasis">Generating CSS sprites</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th rowspan="5">Overall</th>
+              <td></td>
+              <td></td>
+              <td class="strong">Watch</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="strong">Auto-reload</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="strong">Boilerplate</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="strong">Scaffolding</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Package manager</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th rowspan="2">Other</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="strong">Server</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="strong">Notifier</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section data-x="-900" data-y="0" data-z="9000" data-rotate="0" data-scale="1" class="step">
+        <h1>What Brunch does</h1>
+      </section>
+      <section data-x="-1000" data-y="0" data-z="10000" data-rotate="0" data-scale="1" class="step">
+        <h2>Yeoman and Brunch cover same field</h2>
+        <ul>
+          <li>They are more like framework than Grunt.js</li>
+          <li>Main differences between Yeoman/Brunch and Grunt.js:
+            <ul>
+              <li>Script modularization (AMD/CommonJS)</li>
+              <li>Boilerplate</li>
+              <li>Scaffolding</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section data-x="-1100" data-y="0" data-z="11000" data-rotate="0" data-scale="1" class="step">
+        <h2>Difference between Yeoman and Brunch</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <th>AMD</th>
+              <th>CommonJS</th>
+              <th>Boilerplate</th>
+              <th>Scaffolding</th>
+              <th>Package manager</th>
+            </tr>
+            <tr>
+              <th>Yeoman</th>
+              <td>✓</td>
+              <td></td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <th>Brunch</th>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <ul>
+          <li><strong>Yeoman</strong> is built on Grunt.js, Require.js, and Twitter Bower</li>
+          <li><strong>Brunch</strong> is built with own built-in functions</li>
+        </ul>
+      </section>
+      <section data-x="-1200" data-y="0" data-z="12000" data-rotate="0" data-scale="1" class="step">
+        <h2>Why I choose Brunch</h2>
+        <ul>
+          <li>Supports both of AMD and CommonJS modularization</li>
+          <li>Super simple Boilerplate compared to Yeoman</li>
+          <li>Super simple Scaffolding compared to Yeoman</li>
+          <li>Twitter Bower is like a reinventing wheel of NPM</li>
+        </ul>
+      </section>
+      <section data-x="-1300" data-y="0" data-z="13000" data-rotate="0" data-scale="1" class="step yeoman">
+        <p class="message">難しかった...</p>
+      </section>
+      <section data-x="-1400" data-y="0" data-z="14000" data-rotate="0" data-scale="1" class="step">
+        <h2>CommonJS modularization in Brunch</h2>
+        <p>app.coffee:</p>
+        <pre>app = _.extend {}, Backbone.Events
+module.exports = app</pre>
+        <p>init.coffee</p>
+        <pre>app = require './app'
+app.on 'initialize', initialize</pre>
+        <p>index.html</p>
+        <pre>&lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;require('init');&lt;/script&gt;</pre>
+      </section>
+      <section data-x="-1500" data-y="0" data-z="15000" data-rotate="0" data-scale="1" class="step">
+        <h2>Super simple Boilerplate</h2>
+        <p>brunch new proj_name --skeleton git://github.com/japboy/brunch-with-impress.js.git</p>
+      </section>
+      <section data-x="-1600" data-y="0" data-z="16000" data-rotate="0" data-scale="1" class="step">
+        <h2>Super simple Scaffolding</h2>
+        <p>However, no documentation. Read the source.</p>
+      </section>
+      <section data-x="-1700" data-y="0" data-z="17000" data-rotate="0" data-scale="1" class="step nicho"></section>
+      <section data-x="-1800" data-y="0" data-z="18000" data-rotate="0" data-scale="1" class="step">
+        <h1>Composable vs. contextual</h1>
+      </section>
+      <section data-x="-1900" data-y="0" data-z="19000" data-rotate="0" data-scale="1" class="step nealford">
+        <h2>nealford.com • Why Everyone (Eventually) Hates (or Leaves) Maven</h2>
+        <p>Javaのプロジェクトでよく利用されるMavanというビルドツールはプロジェクトの開始時には確かに強力な土台を簡単に作ってくれるツールではあるが、開発が進むにつれて不便に感じる様になってくるのはなぜか。</p>
+        <p>沢山の事が初めからできるということは便利だが、カスタマイズには向かない。Mavenの話ではあるが、Grunt.jsにも同じ事が言えるのかも。</p>
+        <ul>
+          <li><a href="https://gist.github.com/4630423">CSS Radar - 2013/01/25</a></li>
+        </ul>
+      </section>
+      <section data-x="-2000" data-y="0" data-z="20000" data-rotate="0" data-scale="1" class="step">
+        <p class="message">Contextual</p>
+        <div class="pain-3 gruntjs"></div>
+        <div class="pain-3 yeoman"></div>
+        <div class="pain-3 brunch"></div>
+      </section>
+      <section data-x="-2100" data-y="0" data-z="21000" data-rotate="0" data-scale="1" class="step">
+        <p class="message">Composable</p>
+        <div class="pain-2 cakefile"></div>
+        <div class="pain-2 jakefile"></div>
+      </section>
+      <section data-x="-2200" data-y="0" data-z="22000" data-rotate="0" data-scale="1" class="step">
+        <p class="message">Contextual<br>GUI</p>
+        <div class="pain-2 livereload"></div>
+        <div class="pain-2 codekit"></div>
+      </section>
+      <section data-x="-2300" data-y="0" data-z="23000" data-rotate="0" data-scale="1" class="step">
+        <p class="message">Contextual?</p>
+        <div class="pain-1 assetgraph"></div>
+      </section>
+      <section data-x="-2400" data-y="0" data-z="24000" data-rotate="0" data-scale="1" class="step">
+        <h1>Conclusion</h1>
+      </section>
+      <section data-x="-2500" data-y="0" data-z="25000" data-rotate="0" data-scale="1" class="step">
+        <p class="message">好きなの使え</p>
+      </section>
+    </div>
+    <script src="./js/app.js" charset="UTF-8"></script>
+    <script>require('script');</script>
+  </body>
+</html>
